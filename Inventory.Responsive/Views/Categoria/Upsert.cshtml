@@ -1,0 +1,47 @@
+﻿@model Categoria
+
+<form asp-action="Upsert" method="post">
+    <input asp-for="Codigo" hidden />
+    <div class="breadcrumb-section breadcrumb-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 text-center">
+                    <div class="breadcrumb-text">
+                        <p>Administration</p>
+                        <h2 class="text-primary">@(Model.Codigo != 0 ? "Actualizar" : "Crear")  Categoría</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="p-5">
+                            <div class="form-group row">
+
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input asp-for="Descripcion" class="form-control form-control-user"
+                                           placeholder="Descripcion de la categoría">
+                                    <span asp-validation-for="Descripcion" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @if (Model.Codigo != 0)
+                    {
+                        <button asp-action="Upsert" asp-route-id="@Model.Codigo" class="btn btn-primary btn-user btn-block">Actualizar</button>
+                    }
+                    else
+                    {
+                        <button asp-action="Upsert" class="btn btn-primary btn-user btn-block">Crear</button>
+                    }
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</form>

@@ -1,0 +1,88 @@
+﻿@model List<Donaciones>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+                    <p>Administración</p>
+                    <h1>Donaciones</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid mb-5">
+    <a asp-controller="Donaciones" asp-action="Upsert" class="btn btn-primary">
+        Crear Donación
+    </a>
+</div>
+<form>
+    <div class="product-section mt-150 mb-150">
+        <div class="container-fluid">
+            <div class="dt-responsive table-responsive">
+                <table id="footer-search" class="table table-striped table-bordered nowrap">
+                    <thead>
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Entidad</th>
+                            <th>Activo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr id="donaciones_@item.Codigo">
+                                <input asp-for="@item.Codigo" hidden />
+                                <td>@item.Codigo</td>
+                                <td>@item.Entidad</td>
+                                <td>@item.Activos</td>
+                                <td style="text-align:center">
+                                    <button asp-action="Upsert" asp-route-id="@item.Codigo" class="btn btn-primary">
+                                        Actualizar
+                                    </button>
+                                    <a onclick=Delete("@item.Codigo"); class="btn btn-danger">
+                                        Eliminar
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script>
+    function Delete(id) {
+        Swal.fire({
+            title: "Estas seguro que desea eliminar la donación?",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true
+        }).then((willDelete) => {
+            if (willDelete) {
+                $.ajax({
+                    type: "DELETE",
+                    url: "/Donaciones/DeleteDonaciones/" + id,
+                    success: function (data) {
+                        if (data.success) {
+                            $("#donaciones_" + id).remove();
+                        }
+                        else {
+                        }
+                    }
+                });
+            }
+            Swal.fire({
+                title: "Donación Eliminada!",
+                icon: "success",
+            })
+        });
+    }
+</script>

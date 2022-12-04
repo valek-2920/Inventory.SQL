@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "KK1FiBV7K3WMvvt/XGvy6mWOdooPaLBYrsPP3vhWpSY=",
+  "Source": "Inventory.SQL",
+  "BasePath": "_content/Inventory.SQL",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

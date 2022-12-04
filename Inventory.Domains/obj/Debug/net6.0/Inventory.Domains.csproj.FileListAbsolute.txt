@@ -1,0 +1,12 @@
+C:\Users\valek\Desktop\Inventory.SQL\Inventory.Domains\bin\Debug\net6.0\Inventory.Domains.deps.json
+C:\Users\valek\Desktop\Inventory.SQL\Inventory.Domains\bin\Debug\net6.0\Inventory.Domains.dll
+C:\Users\valek\Desktop\Inventory.SQL\Inventory.Domains\bin\Debug\net6.0\Inventory.Domains.pdb
+C:\Users\valek\Desktop\Inventory.SQL\Inventory.Domains\obj\Debug\net6.0\Inventory.Domains.csproj.AssemblyReference.cache
+C:\Users\valek\Desktop\Inventory.SQL\Inventory.Domains\obj\Debug\net6.0\Inventory.Domains.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\valek\Desktop\Inventory.SQL\Inventory.Domains\obj\Debug\net6.0\Inventory.Domains.AssemblyInfoInputs.cache
+C:\Users\valek\Desktop\Inventory.SQL\Inventory.Domains\obj\Debug\net6.0\Inventory.Domains.AssemblyInfo.cs
+C:\Users\valek\Desktop\Inventory.SQL\Inventory.Domains\obj\Debug\net6.0\Inventory.Domains.csproj.CoreCompileInputs.cache
+C:\Users\valek\Desktop\Inventory.SQL\Inventory.Domains\obj\Debug\net6.0\Inventory.Domains.dll
+C:\Users\valek\Desktop\Inventory.SQL\Inventory.Domains\obj\Debug\net6.0\refint\Inventory.Domains.dll
+C:\Users\valek\Desktop\Inventory.SQL\Inventory.Domains\obj\Debug\net6.0\Inventory.Domains.pdb
+C:\Users\valek\Desktop\Inventory.SQL\Inventory.Domains\obj\Debug\net6.0\ref\Inventory.Domains.dll
