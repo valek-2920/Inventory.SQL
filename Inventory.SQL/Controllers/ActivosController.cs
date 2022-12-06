@@ -77,7 +77,7 @@ namespace Inventory.API.Controllers
 
             await _client.Cypher.Match("(d:Activos)")
                                  .Where((Activos d) => d.Codigo == Codigo)
-                                 .Delete("d")
+                                 .DetachDelete("d")
                                  .ExecuteWithoutResultsAsync();
             return Ok();
         }

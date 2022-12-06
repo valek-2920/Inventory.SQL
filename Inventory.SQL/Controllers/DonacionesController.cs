@@ -30,7 +30,7 @@ namespace Inventory.API.Controllers
         public async Task<IActionResult> GetByCodigo(int Codigo)
         {
             var Donaciones = await _client.Cypher.Match("(d:Donacion)")
-                                                  .Where((Donaciones c) => c.Codigo == Codigo)
+                                                  .Where((Donaciones d) => d.Codigo == Codigo)
                                                   .Return(d => d.As<Donaciones>()).ResultsAsync;
 
             return Ok(Donaciones.LastOrDefault());
@@ -71,8 +71,8 @@ namespace Inventory.API.Controllers
         public async Task<IActionResult> Delete(int Codigo)
         {
             await _client.Cypher.Match("(d:Donacion)")
-                                 .Where((Donaciones c) => c.Codigo == Codigo)
-                                 .Delete("c")
+                                 .Where((Donaciones d) => d.Codigo == Codigo)
+                                 .DetachDelete("d")
                                  .ExecuteWithoutResultsAsync();
             return Ok();
         }
