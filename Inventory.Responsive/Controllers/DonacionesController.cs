@@ -75,7 +75,7 @@ namespace Inventory.Responsive.Controllers
         [HttpDelete]
         public async Task<IActionResult> DeleteDonaciones(int id)
         {
-            await _activosServices.deleteActivosById(id);
+            await _donacionesServices.deleteDonacionesById(id);
             return RedirectToAction("Index", "Donaciones");
 
         }
